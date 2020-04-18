@@ -1,0 +1,15 @@
+  name: ANPrisonCore
+  main: net.astralnetwork.play.Main
+  version: 1.0
+  commands:
+      help:
+          usage: /help
+          description: displays the help gui.
+      list:
+        usage: /list
+        description: displays custom list.
+      anreload:
+        usage: /anreload
+        description: reloads the config.
+  softdepend:
+    - depend: PlaceholderAPI

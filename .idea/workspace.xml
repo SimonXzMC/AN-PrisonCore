@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="AN-PrisonCore" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a3d06fef-3e3f-4833-95fd-ae3e28dd80e9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aUYkgvuDQY4DdBhnOrhPzDMvOS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="an-prisoncore" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="discord-project" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="net.astralnetwork.play" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a3d06fef-3e3f-4833-95fd-ae3e28dd80e9" name="Default Changelist" comment="" />
+      <created>1586791783936</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586791783936</updated>
+      <workItem from="1586791786237" duration="6163000" />
+      <workItem from="1586978770744" duration="9079000" />
+      <workItem from="1586987907723" duration="622000" />
+      <workItem from="1587048253216" duration="9379000" />
+      <workItem from="1587207217876" duration="5104000" />
+      <workItem from="1587213524462" duration="4409000" />
+      <workItem from="1587223174462" duration="28199000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="199" key="#Project_Structure" timestamp="1586987558143">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="199" key="#Project_Structure/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1586987558143" />
+    <state x="414" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586987673327">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586796439841" />
+    <state x="414" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1586987673327" />
+    <state x="765" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1587249205944">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586797085523" />
+    <state x="-1155" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1587061807443" />
+    <state x="765" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1587249205944" />
+    <state x="2685" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@1920.0.1920.1080" timestamp="1587238615218" />
+    <state x="790" y="231" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1586792039105">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="790" y="231" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1920.1040/1920.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586792039105" />
+    <state x="640" y="277" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586987851583">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="640" y="277" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1586987851583" />
+    <state x="690" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587053726705">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1587053726705" />
+    <state x="690" y="287" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1587253290864">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="287" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1587253290864" />
+    <state x="2634" y="240" key="DetectedRootsChooserDialog" timestamp="1587250527227">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2634" y="240" key="DetectedRootsChooserDialog/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@1920.0.1920.1080" timestamp="1587250527227" />
+    <state x="2660" y="286" key="FileChooserDialogImpl" timestamp="1587250525052">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586796539722" />
+    <state x="-1799" y="317" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1587061818469" />
+    <state x="121" y="317" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1587248434514" />
+    <state x="2660" y="286" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@1920.0.1920.1080" timestamp="1587250525052" />
+    <state x="2360" y="99" key="SettingsEditor" timestamp="1587250529746">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586796466201" />
+    <state x="440" y="99" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1587248437506" />
+    <state x="2360" y="99" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@1920.0.1920.1080" timestamp="1587250529746" />
+    <state x="769" y="155" key="refactoring.ChangeSignatureDialog" timestamp="1587253305961">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="769" y="155" key="refactoring.ChangeSignatureDialog/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1587253305961" />
+    <state x="2536" y="250" key="run.anything.popup" timestamp="1587213176164">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2536" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@1920.0.1920.1080" timestamp="1587213176164" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1586984017302">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1586984017302" />
+  </component>
+</project>

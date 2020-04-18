@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AN-PrisonCore">
+    <output-path>$PROJECT_DIR$/out/artifacts/AN_PrisonCore</output-path>
+    <root id="archive" name="AN-PrisonCore.jar">
+      <element id="module-output" name="AN-PrisonCore" />
+      <element id="library" level="application" name="spigot-api-1.12.2-R0.1-SNAPSHOT-b1591" />
+    </root>
+  </artifact>
+</component>
