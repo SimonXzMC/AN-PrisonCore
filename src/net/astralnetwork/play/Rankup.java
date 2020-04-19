@@ -31,12 +31,12 @@ public class Rankup implements CommandExecutor, Listener {
 
                 int rank = cfgm.getPlayers().getInt("Players." + p.getUniqueId().toString() + ".Rank");
                 long cost = rankCost(p, rank);
-                String prestige = cfgm.getPlayers().getString("Players." + p.getUniqueId().toString() + ".Prestige");
+                int prestige = cfgm.getPlayers().getInt("Players." + p.getUniqueId().toString() + ".Prestige");
                 int new_rank = rank + 1;
 
                 //Multiply rankup cost by prestige
-                String multiplier = prestige + 1;
-                long charge = 0;
+                int multiplier = prestige + 1;
+                double charge = 0;
                 if (multiplier >= 1){
                     charge = cost * multiplier;
                 } else {
@@ -75,7 +75,7 @@ public class Rankup implements CommandExecutor, Listener {
         return a;
     }
 
-    public int rankCost(Player p, int rank) {
+    public int rankCost(Player p, double rank) {
         int a = 0;
         // Rankup Price List
         if(rank == 1) {
