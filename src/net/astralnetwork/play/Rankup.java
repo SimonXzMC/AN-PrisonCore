@@ -11,17 +11,18 @@ import org.bukkit.plugin.Plugin;
 
 import java.text.NumberFormat;
 
-import static net.astralnetwork.play.Main.cfgm;
+import static net.astralnetwork.play.Main.*;
+
 
 public class Rankup implements CommandExecutor, Listener {
 
-    Plugin plugin = Main.getPlugin(Main.class);
+    Plugin plugin = getPlugin(Main.class);
+    public ConfigManager cfgm;
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-        if(cmd.getName().equalsIgnoreCase("rankup") && sender instanceof Player) {
+        if(cmd.getLabel().equalsIgnoreCase("rankup")){
             Player p = (Player) sender;
-
             if(args.length == 0) {
 
                 //Messages
@@ -35,15 +36,15 @@ public class Rankup implements CommandExecutor, Listener {
                 int new_rank = rank + 1;
 
                 //Multiply rankup cost by prestige
-                int multiplier = prestige + 1;
-                double charge = 0;
+                long multiplier = prestige + 1;
+                long charge = 0;
                 if (multiplier >= 1){
                     charge = cost * multiplier;
                 } else {
                     charge = cost;
                 }
 
-                EconomyResponse r = Main.economy.withdrawPlayer(p, charge);
+                EconomyResponse r = economy.withdrawPlayer(p, charge);
 
                 if(rank >= 1 && rank < 15) {
                     if (r.transactionSuccess()) {
@@ -71,15 +72,19 @@ public class Rankup implements CommandExecutor, Listener {
         // Rankup List
         if(rank == 1) {
             a = "A";
+        }if(rank == 2) {
+            a = "B";
         }
         return a;
     }
 
-    public int rankCost(Player p, double rank) {
+    public int rankCost(Player p, int rank) {
         int a = 0;
         // Rankup Price List
         if(rank == 1) {
             a = 1;
+        } if (rank == 2) {
+            a = 2;
         } return a;
     }
 }

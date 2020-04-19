@@ -15,4 +15,5 @@
         usage: /rankup
         description: Rankup through the prison ranks.
   softdepend:
-    - depend: PlaceholderAPI, Vault
+    - PlaceholderAPI
+    - Vault

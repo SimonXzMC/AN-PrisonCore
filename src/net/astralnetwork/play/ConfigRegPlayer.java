@@ -11,6 +11,7 @@ import static net.astralnetwork.play.Main.*;
 public class ConfigRegPlayer implements Listener {
 
     Plugin plugin = getPlugin(Main.class);
+    public ConfigManager cfgm;
 
 
     @EventHandler

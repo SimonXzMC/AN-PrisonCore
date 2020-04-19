@@ -3,10 +3,7 @@ package net.astralnetwork.play;
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.clip.placeholderapi.PlaceholderHook;
 import net.astralnetwork.play.commands.Help;
-import net.milkbowl.vault.chat.Chat;
-import net.milkbowl.vault.economy.AbstractEconomy;
 import net.milkbowl.vault.economy.Economy;
-import net.milkbowl.vault.permission.Permission;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
@@ -24,16 +21,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import java.io.File;
-import java.util.logging.Logger;
 
 public class Main extends JavaPlugin implements Listener {
 
-    public final Logger logger = Logger.getLogger("Minecraft");
+    public static Economy economy;
     public Help help;
-    public static Economy economy = null;
-    public static Chat chat = null;
-    public static Permission perms = null;
-    public static ConfigManager cfgm;
+    public ConfigManager cfgm;
 
     @Override
     public void onEnable() {
@@ -43,7 +36,7 @@ public class Main extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Rankup(), this);
         getServer().getPluginManager().registerEvents(new ConfigRegPlayer(), this);
         this.getCommand("rankup").setExecutor(new Rankup());
-        this.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() + " Has been enabled!");
+        getLogger().info(pdfFile.getName() + " Version " + pdfFile.getVersion() + " Has been enabled!");
 
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
             Bukkit.getPluginManager().registerEvents(this, this);
@@ -53,7 +46,6 @@ public class Main extends JavaPlugin implements Listener {
         loadConfigManager();
 
         setupEconomy();
-        setupChat();
         registerPlaceholders();
     }
 
@@ -81,7 +73,7 @@ public class Main extends JavaPlugin implements Listener {
     @Override
     public void onDisable() {
         PluginDescriptionFile pdfFile = this.getDescription();
-        this.logger.info(pdfFile.getName() + " Has beeen disabled!");
+        getLogger().info(pdfFile.getName() + " Has beeen disabled!");
     }
 
     @Override
@@ -122,10 +114,20 @@ public class Main extends JavaPlugin implements Listener {
         return true;
     }
 
-    @EventHandler (priority = EventPriority.HIGHEST)
+    @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        if (p.hasPlayedBefore()) {
+        if (!p.hasPlayedBefore()) {
+            e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', "&a&l + NEW &e" + p.getName()));
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7&m--------------------"));
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&f&lWelcome to " + getConfig().getString("server-name")+ " " + p.getName()));
+            p.sendMessage("");
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2»&a» &f&lWEBSITE " + getConfig().getString("server-website")));
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2»&a» &f&lDONATE " + getConfig().getString("server-donate")));
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2»&a» &f&lDISCORD " + getConfig().getString("server-discord")));
+            p.sendMessage("");
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7&m--------------------"));
+        } else {
             e.setJoinMessage(ChatColor.GREEN + "+ " + p.getName());
             p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7&m--------------------"));
             p.sendMessage(ChatColor.translateAlternateColorCodes('&', "        &f&lWelcome back to "));
@@ -136,20 +138,10 @@ public class Main extends JavaPlugin implements Listener {
             p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2»&a» &f&lDISCORD " + getConfig().getString("server-discord")));
             p.sendMessage("");
             p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7&m--------------------"));
-        } else {
-            e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', "&a&l + NEW &e" + p.getName()));
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7&m--------------------"));
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&f&lWelcome to " + getConfig().getString("server-name")+ " " + p.getName()));
-            p.sendMessage("");
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2»&a» &f&lWEBSITE " + getConfig().getString("server-website")));
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2»&a» &f&lDONATE " + getConfig().getString("server-donate")));
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2»&a» &f&lDISCORD " + getConfig().getString("server-discord")));
-            p.sendMessage("");
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7&m--------------------"));
         }
     }
 
-    @EventHandler (priority = EventPriority.HIGHEST)
+    @EventHandler
     public void onPlayerLeave(PlayerQuitEvent e) {
         Player p = e.getPlayer();
         e.setQuitMessage(ChatColor.translateAlternateColorCodes('&', "&c- " + (p.getName())));
@@ -187,42 +179,17 @@ public class Main extends JavaPlugin implements Listener {
         });
     }
 
-    /**
-     * VAULT API
-     *
-     */
     // Econ
-    private boolean setupEconomy() {
+    private boolean setupEconomy(){
         RegisteredServiceProvider<Economy> economyProvider = getServer().getServicesManager().getRegistration(Economy.class);
         if (economyProvider != null) {
             economy = economyProvider.getProvider();
         }
-
         return (economy != null);
-
-    }
-    // Chat
-    private boolean setupChat() {
-        RegisteredServiceProvider<Chat> rsp = getServer().getServicesManager().getRegistration(Chat.class);
-        chat = rsp.getProvider();
-        return chat != null;
     }
 
-    public static Chat getChat() {
-        return chat;
-    }
-
-    // Permissions
-    private boolean setupPermissions() {
-        RegisteredServiceProvider<Permission> rsp = getServer().getServicesManager().getRegistration(Permission.class);
-        perms = rsp.getProvider();
-        return perms != null;
-    }
-
-    public static Permission getPermissions() {
-        return perms;
-    }
-
-
-
+    /**
+     * VAULT API
+     *
+     */
 }

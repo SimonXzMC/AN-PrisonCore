@@ -11,5 +11,9 @@
       anreload:
         usage: /anreload
         description: reloads the config.
+      rankup:
+        usage: /rankup
+        description: Rankup through the prison ranks.
   softdepend:
-    - depend: PlaceholderAPI
+    - PlaceholderAPI
+    - Vault
